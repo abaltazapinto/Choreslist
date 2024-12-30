@@ -1,0 +1,123 @@
+/*
+
+COLOR PALETTE
+
+WHITE: #FEFEFE
+BLACK: #000000
+TEXT INPUT BACKGROUND: #EEEEEE
+ADD BUTTON: #FFCC68
+DELETE BUTTON: #FF9548
+CHORE: #FBDF7C
+
+*/
+
+:root {
+  --white: #fefefe;
+  --black: #000000;
+  --text-input-background: #eeeeee;
+  --add-button: #ffcc68;
+  --delete-button: #ff9548;
+  --chore: #fbdf7c;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: var(--chore);
+  align-items: center;
+  font-size: 1.95rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Concert One", cursive;
+  color: var(--black);
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-size: inherit;
+}
+
+.background {
+  background-color: var(--chore);
+  z-index: -1;
+  position: absolute;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  padding: 20px;
+  outline: 2px solid var(--black);
+}
+input {
+  font-size: inherit;
+}
+input:checked + label + .background {
+  background-color: var(--black);
+}
+
+input:checked + label + .background > h1 {
+  color: var(--white);
+}
+input:checked + label + .background > .to-do-list {
+  color: var(--white);
+  background: var(--delete-button);
+  font-weight: bold;
+}
+#darkmode-toggle {
+  visibility: hidden;
+}
+#input-el {
+  padding: 5px;
+}
+
+/* Buttons colors */
+.add-chore-list-btn {
+  background: var(--add-button);
+  border-radius: 50%;
+  padding: 0.5em;
+
+}
+.add-chore-list-btn:active {
+  background: yellow;
+  border-radius: 50%;
+  
+}
+#delete-btn {
+  background: var(--delete-button);
+  border-radius: 50%;
+  padding: 1em;
+  margin-top: 1.5rem;
+}
+
+#ul-el {
+  padding: 8px;
+  font-size: inherit;
+  border-radius: 10px;
+  margin-top: 15px;
+  list-style: none;
+}
+#ul-el li {
+  background: var(--chore);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: inherit;
+}
+
+li input {
+  font-size: 2rem;
+}
+
+#toDo:checked {
+  visibility: hidden;
+}
