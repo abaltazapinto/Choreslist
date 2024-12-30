@@ -59,7 +59,8 @@ button {
   outline: 2px solid var(--black);
 }
 input {
-  font-size: inherit;
+  font-size: 2rem;
+  height: 4rem;
 }
 input:checked + label + .background {
   background-color: var(--black);
@@ -73,11 +74,9 @@ input:checked + label + .background > .to-do-list {
   background: var(--delete-button);
   font-weight: bold;
 }
-#darkmode-toggle {
-  visibility: hidden;
-}
+
 #input-el {
-  padding: 5px;
+  padding: 0.5rem;
 }
 
 /* Buttons colors */
@@ -94,8 +93,8 @@ input:checked + label + .background > .to-do-list {
 }
 #delete-btn {
   background: var(--delete-button);
-  border-radius: 50%;
-  padding: 1em;
+  border-radius: 30px;
+  padding: 0.5em;
   margin-top: 1.5rem;
 }
 
@@ -116,6 +115,9 @@ input:checked + label + .background > .to-do-list {
 
 li input {
   font-size: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 #toDo:checked {
