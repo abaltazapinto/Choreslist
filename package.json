@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s039qn6",
-  "description": "https://v2.scrimba.com/s039qn6",
+  "name": "Choreslist",
+  "description": "",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite": "latest"
+    "vite": "latest",
+    :"@netlify/sdk": "^2.8.0"
   },
   "devDependencies": {}
 }
