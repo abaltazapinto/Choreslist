@@ -12,6 +12,7 @@ import {
 const firebaseConfig = {
   databaseURL:
     "https://chorelist-e6d57-default-rtdb.europe-west1.firebasedatabase.app/",
+  
 };
 
 const app = initializeApp(firebaseConfig);
@@ -21,7 +22,6 @@ const referenceinDB = ref(database, "chorelist");
 let inputEl = document.querySelector("#input-el");
 const ulEl = document.getElementById("ul-el");
 const addChoreBtn = document.querySelector(".add-chore-list-btn");
-const deleteAllButtonEl = document.getElementById("delete-btn");
 
 function render(myTodos) {
   let listTodos = "";
@@ -53,10 +53,6 @@ onValue(referenceinDB, function (snapshot) {
   }
 });
 
-deleteAllButtonEl.addEventListener("dblclick", function () {
-  remove(referenceinDB);
-  ulEl.innerHTML = "";
-});
 
 addChoreBtn.addEventListener("click", function () {
   push(referenceinDB, inputEl.value);
@@ -84,6 +80,7 @@ function hideItemDelayed(index) {
 
 function removeItemFromFirebase(index) {
   const chorelistRef = ref(database, "chorelist");
+  
   onValue(chorelistRef, (snapshot) => {
     const data = snapshot.val();
     Object.entries(data).forEach(([key, value], i) => {
