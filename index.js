@@ -11,7 +11,7 @@ import {
 
 const firebaseConfig = {
   databaseURL:
-    "https://chorelist-e6d57-default-rtdb.europe-west1.firebasedatabase.app/",
+    "https://chorelist2-f0d14-default-rtdb.europe-west1.firebasedatabase.app/",
   
 };
 
